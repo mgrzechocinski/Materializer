@@ -1,6 +1,7 @@
 package pl.mobilewarsaw.android.materializer;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -35,9 +36,13 @@ public class MainActivity extends ActionBarActivity implements MenuFragment.Navi
     @Override
     public void onNavigationDrawerItemSelected(int position) {
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
-                .commit();
+        if(position == 2){
+            startActivity(new Intent(this, TabbedActivity.class));
+        }else {
+            fragmentManager.beginTransaction()
+                    .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
+                    .commit();
+        }
     }
 
     public void onSectionAttached(int number) {

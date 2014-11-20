@@ -3,9 +3,10 @@
     <string name="app_name">Materializer</string>
     <string name="title_section1">Section 1</string>
     <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section3">Tabs</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
+    <string name="fragment_tab1">This is tabbed fragment 1</string>
 </resources>
