@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 19
+    compileSdkVersion 21
     buildToolsVersion "21.1.1"
 
     signingConfigs {
@@ -16,7 +16,7 @@ android {
     defaultConfig {
         applicationId "pl.mobilewarsaw.android.materializer"
         minSdkVersion 9
-        targetSdkVersion 19
+        targetSdkVersion 21
 
         versionCode 1
         versionName "1.0"
@@ -38,7 +38,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:19.0.1'
+    compile 'com.android.support:appcompat-v7:21.0.2'
     compile 'org.roboguice:roboguice:3.0'
     provided 'org.roboguice:roboblender:3.0'
     provided 'com.jayway.android.robotium:robotium-solo:5.2.1'
