@@ -24,6 +24,7 @@ android {
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
         testHandleProfiling false
     }
+
     buildTypes {
         debug{
             signingConfig android.signingConfigs.mobilewarsaw_debug
@@ -38,6 +39,8 @@ android {
 
 dependencies {
     compile 'com.android.support:appcompat-v7:19.0.1'
+    compile 'org.roboguice:roboguice:3.0'
+    provided 'org.roboguice:roboblender:3.0'
     provided 'com.jayway.android.robotium:robotium-solo:5.2.1'
     androidTestCompile 'com.jayway.android.robotium:robotium-solo:5.2.1'
 }
