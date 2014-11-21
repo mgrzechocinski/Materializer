@@ -12,7 +12,7 @@ import roboguice.inject.InjectView;
  */
 public class TabbedActivity extends RoboActionBarActivity {
 
-    public static final int NUMBER_OF_TABS = 20;
+    public static final int NUMBER_OF_TABS = 2;
 
     @InjectView(R.id.m_if_vp_tabs)
     private ViewPager viewPager;
