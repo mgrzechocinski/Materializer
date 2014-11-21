@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
-           android:id="@+id/m_if_vp_tabs"
-           android:layout_width="match_parent"
-           android:layout_height="match_parent" />
+<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent"
+              android:orientation="vertical"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/m_component_toolbar"/>
+
+    <pl.mobilewarsaw.android.materializer.tabs.SlidingTabLayout android:id="@+id/m_id_tab_layout"
+                                                                android:layout_width="match_parent"
+                                                                android:layout_height="wrap_content"/>
+
+    <android.support.v4.view.ViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+                                       android:id="@+id/m_if_vp_tabs"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent"/>
+</LinearLayout>
