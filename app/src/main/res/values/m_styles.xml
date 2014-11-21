@@ -1,16 +1,6 @@
 <resources>
 
     <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="toolbarStyle">@style/NoPaddingToolbar</item>
-        <item name="toolbarNavigationButtonStyle">@style/NoPaddingNavigationButton</item>
-    </style>
-
-    <style name="NoPaddingToolbar" parent="Base.Widget.AppCompat.Toolbar">
-        <item name="contentInsetStart">0dp</item>
-    </style>
-
-    <style name="NoPaddingNavigationButton" parent="Widget.AppCompat.Toolbar.Button.Navigation">
-        <item name="android:minWidth">0dp</item>
     </style>
 
 </resources>

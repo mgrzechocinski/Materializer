@@ -95,6 +95,10 @@ public class MainActivity extends RoboActionBarActivity implements MenuFragment.
         return super.onOptionsItemSelected(item);
     }
 
+    public Toolbar getToolbar() {
+        return toolbar;
+    }
+
     public static class PlaceholderFragment extends Fragment {
 
         private static final String ARG_SECTION_NUMBER = "section_number";
