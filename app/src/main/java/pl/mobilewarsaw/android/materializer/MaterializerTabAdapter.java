@@ -10,7 +10,7 @@ import android.view.View;
 /**
  * @author Mateusz Grzechociński <mateusz.grzechocinski@polidea.com>
  */
-public class MaterializerTabAdapter extends FragmentStatePagerAdapter{
+public class MaterializerTabAdapter extends FragmentPagerAdapter{
 
     private int numberOfTabs;
 
