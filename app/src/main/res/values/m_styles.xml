@@ -1,9 +1,8 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="toolbarStyle">@style/NoPaddingToolbar</item>
         <item name="toolbarNavigationButtonStyle">@style/NoPaddingNavigationButton</item>
-
     </style>
 
     <style name="NoPaddingToolbar" parent="Base.Widget.AppCompat.Toolbar">

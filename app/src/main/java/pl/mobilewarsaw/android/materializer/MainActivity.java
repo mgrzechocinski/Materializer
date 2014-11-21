@@ -7,23 +7,31 @@ import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
+import roboguice.activity.RoboActionBarActivity;
+import roboguice.inject.InjectView;
 
-public class MainActivity extends ActionBarActivity implements MenuFragment.NavigationDrawerCallbacks {
+public class MainActivity extends RoboActionBarActivity implements MenuFragment.NavigationDrawerCallbacks {
 
     private MenuFragment mMenuFragment;
 
     private CharSequence mTitle;
 
+    @InjectView(R.id.m_id_toolbar)
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.m_activity_main);
+        setSupportActionBar(toolbar);
+
 
         mMenuFragment = (MenuFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
@@ -113,6 +121,7 @@ public class MainActivity extends ActionBarActivity implements MenuFragment.Navi
             super.onAttach(activity);
             MainActivity mainActivity = (MainActivity) activity;
             mainActivity.onSectionAttached(getArguments().getInt(ARG_SECTION_NUMBER));
+
         }
     }
 
