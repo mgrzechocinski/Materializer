@@ -29,8 +29,10 @@ public class TabbedActivity extends RoboActionBarActivity {
         setContentView(R.layout.m_activity_tabbed);
 
         viewPager.setAdapter(new MaterializerTabAdapter(getSupportFragmentManager(), NUMBER_OF_TABS));
+        slidingTabLayout.setCustomTabView(R.layout.m_component_tab, R.id.m_id_tv_tab_title);
 
         slidingTabLayout.setViewPager(viewPager);
+
         toolbar.setTitle(R.string.app_name);
 
         slidingTabLayout.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {

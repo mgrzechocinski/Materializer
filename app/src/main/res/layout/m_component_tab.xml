@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          android:layout_width="wrap_content"
+          android:id="@+id/m_id_tv_tab_title"
+          android:textColor="@color/primary_text_default_material_dark"
+          android:padding="13dp"
+          android:gravity="center"
+          android:background="?attr/selectableItemBackground"
+          android:layout_height="wrap_content"/>
+
