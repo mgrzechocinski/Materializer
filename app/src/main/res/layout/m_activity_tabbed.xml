@@ -6,6 +6,9 @@
 
     <include layout="@layout/m_component_toolbar"/>
 
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/loremipsum_long"/>
+
     <pl.mobilewarsaw.android.materializer.tabs.SlidingTabLayout android:id="@+id/m_id_tab_layout"
                                                                 android:layout_width="match_parent"
                                                                 android:background="@color/primary_material_dark"
