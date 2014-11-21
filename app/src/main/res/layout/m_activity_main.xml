@@ -1,27 +1,27 @@
-<android.support.v4.widget.DrawerLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/drawer_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<LinearLayout android:layout_height="match_parent" android:layout_width="match_parent"
+              android:orientation="vertical"
+              xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:orientation="vertical">
+    <include layout="@layout/m_component_toolbar"/>
 
-        <include layout="@layout/m_component_toolbar"/>
+    <android.support.v4.widget.DrawerLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/drawer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
         <FrameLayout
                 android:id="@+id/container"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent">
+        </FrameLayout>
 
-    </LinearLayout>
 
+        <fragment android:id="@+id/navigation_drawer"
+                  android:layout_width="@dimen/dimen_m_navigation_drawer_width"
+                  android:layout_height="match_parent"
+                  android:layout_gravity="left"
+                  android:name="pl.mobilewarsaw.android.materializer.MenuFragment"/>
 
-    <fragment android:id="@+id/navigation_drawer"
-              android:layout_width="@dimen/dimen_m_navigation_drawer_width"
-              android:layout_height="match_parent"
-              android:layout_gravity="left"
-              android:name="pl.mobilewarsaw.android.materializer.MenuFragment"/>
-
-</android.support.v4.widget.DrawerLayout>
+    </android.support.v4.widget.DrawerLayout>
+</LinearLayout>
