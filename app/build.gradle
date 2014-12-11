@@ -18,15 +18,15 @@ android {
         minSdkVersion 9
         targetSdkVersion 21
 
-        versionCode 1
-        versionName "1.0"
+        versionCode System.getProperty("CI_BUILD_NUMBER") ? System.getProperty("CI_BUILD_NUMBER").toInteger() : 1
+        versionName System.getProperty("CI_BUILD_VERSION") ? System.getProperty("CI_BUILD_VERSION") : "dev"
 
         testInstrumentationRunner "android.test.InstrumentationTestRunner"
         testHandleProfiling false
     }
 
     buildTypes {
-        debug{
+        debug {
             signingConfig android.signingConfigs.mobilewarsaw_debug
             applicationIdSuffix ".debug"
         }
@@ -35,12 +35,21 @@ android {
             proguardFiles 'proguard-rules.pro'
         }
     }
-}
 
-dependencies {
-    compile 'com.android.support:appcompat-v7:21.0.2'
-    compile 'org.roboguice:roboguice:3.0'
-    provided 'org.roboguice:roboblender:3.0'
-    provided 'com.jayway.android.robotium:robotium-solo:5.2.1'
-    androidTestCompile 'com.jayway.android.robotium:robotium-solo:5.2.1'
+    productFlavors {
+        experimental {
+            useJack = true
+        }
+        gradle {
+            useJack = false
+        }
+    }
+
+    dependencies {
+        compile 'com.android.support:appcompat-v7:21.0.2'
+        compile 'org.roboguice:roboguice:3.0'
+        provided 'org.roboguice:roboblender:3.0'
+        provided 'com.jayway.android.robotium:robotium-solo:5.2.1'
+        androidTestCompile 'com.jayway.android.robotium:robotium-solo:5.2.1'
+    }
 }
