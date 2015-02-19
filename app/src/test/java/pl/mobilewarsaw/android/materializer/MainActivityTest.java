@@ -9,6 +9,6 @@ public class MainActivityTest {
     public void shouldMainActivityBeNotNull() throws Exception {
         //dummy test
         MainActivity mainActivity = new MainActivity();
-        Assertions.assertThat(mainActivity).isNull();
+        Assertions.assertThat(mainActivity).isNotNull();
     }
 }
