@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.1.1"
+    buildToolsVersion "21.1.2"
 
     signingConfigs {
         mobilewarsaw_debug {
@@ -37,11 +37,11 @@ android {
     }
 
     productFlavors {
-        experimental {
-            useJack = true
+        flavor1{
+
         }
-        gradle {
-            useJack = false
+        flavor2{
+
         }
     }
 
